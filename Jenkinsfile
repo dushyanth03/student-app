@@ -10,7 +10,8 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/dushyanth03/student-app.git'
+                git branch: 'main',
+                url: 'https://github.com/dushyanth03/student-app.git'
             }
         }
 
