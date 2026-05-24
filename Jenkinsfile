@@ -33,4 +33,25 @@ pipeline {
             }
         }
     }
+
+    post {
+
+        success {
+
+            mail(
+                to: 'dshnthr@gmail.com',
+                subject: 'Jenkins Build SUCCESS',
+                body: 'Student App pipeline completed successfully.'
+            )
+        }
+
+        failure {
+
+            mail(
+                to: 'dshnthr@gmail.com',
+                subject: 'Jenkins Build FAILED',
+                body: 'Student App pipeline failed.'
+            )
+        }
+    }
 }
